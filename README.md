@@ -16,8 +16,9 @@ Activate 40A isolator from
 ### Inputs
 1. Temperature sensors
 2. Bus voltage sensor
-3. Element voltage present sensors
-4. Flow sensor
+3. Current sensor
+4. Element voltage present sensors
+5. Flow sensor
 
 
 ### Communications
