@@ -2,6 +2,10 @@
 Solar Heating
 
 ## Controller
+
+Include test buttons
+Reset button for bootloader
+
 ### Safety Hardware
 Activate 40A isolator from
 1. If element > 5 V for 50 ms
@@ -9,21 +13,16 @@ Activate 40A isolator from
 3. If tank temperature > 60 C
 
 ### Outputs
-1. Isolator drive (1)
-2. Pump relay (1)
-3. SSR drives (6)
+1. Isolator constant current drive (1)
+2. 5 V SSR drives (8)
 
 ### Inputs
-1. Temperature sensors (6)
+1. Temperature sensors (5)
 2. Bus voltage sensor (1)
-3. Current sensor (1)
-4. Element voltage present sensors (6)
-5. Flow sensor (1)
+4. Element voltage present (1)
+5. Tank level (1)
+6. Flow sensor (1)
 
 
 ### Communications
-1. Serial bus (can/rs485/onewire) (2)
-2. Display
-3. LEDs
-4. Buzzer
-5. 
+1. Serial bus (onewire) (2)
