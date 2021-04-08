@@ -22,7 +22,7 @@ Activate 40A isolator from
 
 
 ### Communications
-1. Serial bus
+1. Serial bus (can/rs485/onewire)
 2. Display
 3. LEDs
 4. Buzzer
