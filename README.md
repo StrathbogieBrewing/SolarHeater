@@ -25,4 +25,16 @@ Activate 40A isolator from
 
 
 ### Communications
-1. Serial bus (onewire) (2)
+1. Serial bus (isolated onewire) (2)
+
+
+## Universal Hardware
+
+Design PCB for maximum utility.
+
+Supply 10 to 100 V
+
+
+
+
+
