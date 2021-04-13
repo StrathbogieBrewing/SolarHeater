@@ -12,9 +12,11 @@ Activate 40A isolator from
 2. If tank low level input active
 3. If tank temperature > 60 C
 
-### Outputs
-1. Isolator constant current drive (1)
-2. 5 V SSR drives (8)
+### Digital Outputs
+1. Open collector / drain 100 V / 2A
+2. Relay drive with free wheel diode
+3. 5 V / 12 V SSR drive
+4. Isolated DRED output
 
 ### Inputs
 1. Temperature sensors (5)
