@@ -26,11 +26,11 @@ PushECOToAnnotationFile=1
 [Document1]
 DocumentPath=Controller.SchDoc
 AnnotationEnabled=1
-AnnotateStartValue=100
+AnnotateStartValue=70
 AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=1
+AnnotateOrder=4
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -68,35 +68,7 @@ ClassGenNCAutoScope=None
 [Document4]
 DocumentPath=Communications.SchDoc
 AnnotationEnabled=1
-AnnotateStartValue=400
-AnnotationIndexControlEnabled=1
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=4
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-
-[Document5]
-DocumentPath=Digital.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=300
-AnnotationIndexControlEnabled=1
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=3
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-
-[Document6]
-DocumentPath=Analog.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=200
+AnnotateStartValue=30
 AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
@@ -107,14 +79,42 @@ ClassGenCCAutoEnabled=1
 ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
-[Document7]
-DocumentPath=PowerSupply.SchDoc
+[Document5]
+DocumentPath=Digital.SchDoc
 AnnotationEnabled=1
-AnnotateStartValue=500
+AnnotateStartValue=10
 AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=5
+AnnotateOrder=0
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+
+[Document6]
+DocumentPath=Analog.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=20
+AnnotationIndexControlEnabled=1
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+
+[Document7]
+DocumentPath=PowerSupply.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=50
+AnnotationIndexControlEnabled=1
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=3
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -124,11 +124,11 @@ ClassGenNCAutoScope=None
 [Document8]
 DocumentPath=Main.SchDoc
 AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=1
+AnnotateStartValue=100
+AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=0
+AnnotateOrder=5
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -397,16 +397,14 @@ Name=Report Outputs
 Description=
 TargetPrinter=CutePDF Writer
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintWhat=1
-OutputType1=SimpleBOM
-OutputName1=Simple BOM
+OutputType1=BOM_PartType
+OutputName1=Bill of Materials
 OutputDocumentPath1=
 OutputVariantName1=
 OutputEnabled1=1
 OutputDefault1=0
-Configuration1_Name1=OutputConfigurationParameter1
-Configuration1_Item1=Record=SimpleBOMView|SimpleBOMMode=0
-OutputType2=SinglePinNetReporter
-OutputName2=Report Single Pin Nets
+OutputType2=ComponentCrossReference
+OutputName2=Component Cross Reference Report
 OutputDocumentPath2=
 OutputVariantName2=
 OutputEnabled2=1
@@ -417,14 +415,16 @@ OutputDocumentPath3=
 OutputVariantName3=
 OutputEnabled3=1
 OutputDefault3=0
-OutputType4=BOM_PartType
-OutputName4=Bill of Materials
+OutputType4=SimpleBOM
+OutputName4=Simple BOM
 OutputDocumentPath4=
 OutputVariantName4=
 OutputEnabled4=1
 OutputDefault4=0
-OutputType5=ComponentCrossReference
-OutputName5=Component Cross Reference Report
+Configuration4_Name1=OutputConfigurationParameter1
+Configuration4_Item1=Record=SimpleBOMView|SimpleBOMMode=0
+OutputType5=SinglePinNetReporter
+OutputName5=Report Single Pin Nets
 OutputDocumentPath5=
 OutputVariantName5=
 OutputEnabled5=1
