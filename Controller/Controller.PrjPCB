@@ -150,10 +150,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for Controller\Controller.BOM
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for Controller\Controller.CSV
+DocumentPath=ProjectOutputs\Design Rule Check - Controller.html
 
 [OutputGroup1]
 Name=Netlist Outputs
