@@ -1,15 +1,5 @@
-Output: Schematic Prints
-Type  : Schematic Print
-From  : Schematic Document [Controller.SchDoc]
-   Printed Document[Analog.SchDoc]
-   Printed Document[Communications.SchDoc]
-   Printed Document[Controller.SchDoc]
-   Printed Document[Digital.SchDoc]
-   Printed Document[Main.SchDoc]
-   Printed Document[PowerSupply.SchDoc]
-
 
 Files Generated   : 0
-Documents Printed : 6
+Documents Printed : 0
 
-Finished Output Generation At 11:30:39 AM On 2021-04-27
+Finished Output Generation At 3:40:54 PM On 2021-05-31
