@@ -1,0 +1,128 @@
+********************************************************************************
+***                                                                          ***
+*** SIMetrix/SIMPLIS Intro Version 6.10i (x86) - 2021-09-06 12:32:41 PM      ***
+*** Platform: Windows XP                                                     ***
+*** Architecture: x86                                                        ***
+*** Serial Number:                                                           ***
+*** User:                                                                    ***
+***                                                                          ***
+*** TITLE:   * E:\SolarHeater\Oven\powerControl.sxsch                        ***
+*** NETLIST: E:\SolarHeater\Oven\design.net                                  ***
+***                                                                          ***
+********************************************************************************
+
+********************************************************************************
+***                                                                          ***
+***                                Input Deck                                ***
+***                                                                          ***
+********************************************************************************
+
+V1 V1_P D2_P SIN 0 50 50 -20m 0
+V2 V2_P 0 PULSE -4.5 5.5 0 100n 100n 49.9u 100u
+R1 R1_P V1_P 100
+X$L1 TX2_20 L1_N L1$TP_LOSSYL pinnames: P N
+.SUBCKT L1$TP_LOSSYL 1 2
+L1 1 3 500u
+RSHUNT 1 3 1Meg
+RSERIES 2 3 100m
+.ENDS L1$TP_LOSSYL
+D1 0 D2_P mur860
+D2 D2_P D2_N mur860
+D3 L1_N D2_N mur860
+D4 0 L1_N mur860
+X$S1 D2_N 0 V2_P 0 gen_switch : RON=1  ROFF=1Meg VON=3  VOFF=2  pinnames: P N CP CN
+C1 D2_N 0 100n  
+C2 R1_P D2_P 100n  
+X$TX2 R1_P D2_P TX2_20 D2_P Ideal_TxTX2 pinnames: 10 11 20 21 
+.subckt Ideal_TxTX2 10 11 20 21 
+L1 10 11 100m 
+L2 20 21 100m 
+K12 L1 L2 1 
+.ends 
+.TRAN 100m
+.subckt gen_switch 1 2 3 4
+S1 1 2 3 4 SW
+.model SW VSWITCH RON={ron} ROFF={roff} VON={von} VOFF={voff}
+.ends
+.model mur860 d(is=600e-18 rs=44m cjo=370p m=0.40 vj=0.75 isr=26n 
++ bv=600 ibv=100u tt=87n)
+**************************************************************************
+* jrw 18.2.94.
+* Data from Motorola Rectifier device data DL151/D
+* MURD305-320
+
+********************************************************************************
+***                                                                          ***
+*** Starting Transient analysis at 12:32:41 PM                               ***
+***                                                                          ***
+*** Analysis card: .TRAN 100m                                                ***
+***                                                                          ***
+********************************************************************************
+
+********************************************************************************
+***                                                                          ***
+***                             Device parameters                            ***
+***                                                                          ***
+********************************************************************************
+Model parameters for devices of type Diode
+==========================================
+Model:       mur860       
+
+bv           600          
+cjo          370p         
+ibv          100u         
+is           600a         
+isr          26n          
+m            400m         
+rs           44m          
+tt           87n          
+vj           750m         
+
+
+Model parameters for devices of type Switch
+===========================================
+Model:       S1.SW        
+
+roff         1Meg         
+ron          1            
+voff         2            
+von          3            
+
+
+Analysis statistics
+===================
+
+Nominal temperature = 27
+Operating temperature = 27
+Total iterations = 275533
+Transient iterations = 275513
+Transient timepoints = 84286
+Accepted timepoints = 81484
+Total analysis time = 1.322
+Transient time = 0
+Matrix reordering time = 0
+L-U decomposition time = 0
+Matrix solve time = 0
+Load time = 0
+Transient L-U decomp time = 0
+Transient solve time = 0
+Circuit build time = 9.82547e-014
+Simulator initialise time = 9.82547e-014
+Data write time = 0
+JI2 Iterations = 20
+Diag. GMIN stepping iterations = 0
+Junc. GMIN stepping iterations = 0
+Source stepping iterations = 0
+PTA iterations = 0
+Number of matrix fill ins = 21
+Number of initial matrix elements = 55
+Circuit equations = 18
+State vector size = 27
+Number of write buffer faults = 0
+
+Run statistics
+==============
+
+Netlist read in time = 0.01
+Total run time = 1.332 seconds
+Analysis concluded 2021-09-06 12:32:42 PM

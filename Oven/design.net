@@ -1,0 +1,27 @@
+* E:\SolarHeater\Oven\powerControl.sxsch
+*#SIMETRIX
+V1 V1_P D2_P SIN 0 50 50 -20m 0
+V2 V2_P 0 PULSE -4.5 5.5 0 100n 100n 49.9u 100u
+R1 R1_P V1_P 100
+X$L1 TX2_20 L1_N L1$TP_LOSSYL pinnames: P N
+.SUBCKT L1$TP_LOSSYL 1 2
+L1 1 3 500u
+RSHUNT 1 3 1Meg
+RSERIES 2 3 100m
+.ENDS L1$TP_LOSSYL
+D1 0 D2_P mur860
+D2 D2_P D2_N mur860
+D3 L1_N D2_N mur860
+D4 0 L1_N mur860
+X$S1 D2_N 0 V2_P 0 gen_switch : RON=1  ROFF=1Meg VON=3  VOFF=2  pinnames: P N CP CN
+C1 D2_N 0 100n  
+C2 R1_P D2_P 100n  
+X$TX2 R1_P D2_P TX2_20 D2_P Ideal_TxTX2 pinnames: 10 11 20 21 
+.subckt Ideal_TxTX2 10 11 20 21 
+L1 10 11 100m 
+L2 20 21 100m 
+K12 L1 L2 1 
+.ends 
+
+.TRAN 100m
+
